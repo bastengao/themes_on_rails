@@ -16,6 +16,7 @@ module ThemesOnRails
 
           # initialize
           theme_instance = ThemesOnRails::ActionController.new(controller, theme)
+          controller.instance_eval { @_current_rails_theme = theme_instance.theme_name }
 
           # prepend view path
           controller.prepend_view_path theme_instance.theme_view_path

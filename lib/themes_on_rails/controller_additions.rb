@@ -9,5 +9,9 @@ module ThemesOnRails
         ThemesOnRails::ActionController.apply_theme(self, theme, options)
       end
     end
+
+    def current_theme
+      @_current_rails_theme
+    end
   end
 end
